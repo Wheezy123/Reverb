@@ -5,6 +5,8 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    @ladies = User.all(:order =>'gender, last_name')
+   
   end
 
   def import
