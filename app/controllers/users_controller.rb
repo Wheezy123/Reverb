@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @users = User.all
     @ladies = User.all(:order =>'gender, last_name')
     @birthday = @users.order(:date_of_birth)
-   
+    @last = @users.order("last_name DESC")
   end
 
   def import
