@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     @ladies = User.all(:order =>'gender, last_name')
+    @birthday = @users.order(:date_of_birth)
    
   end
 
