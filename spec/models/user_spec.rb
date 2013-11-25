@@ -21,4 +21,5 @@ describe User do
 		user = User.new
 		user.favorite_color.should == 'red'
 	end
+
 end
