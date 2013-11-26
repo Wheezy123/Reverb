@@ -1,4 +1,4 @@
-<h1>Listing users</h1>
+<h1>All Users (no order)</h1>
 
 <table>
   <thead>
@@ -29,6 +29,7 @@
     <% end %>
   </tbody>
 </table>
+<br/>
 
 <h1>Ladies First</h1>
 
@@ -38,8 +39,8 @@
       <th>Last name</th>
       <th>First name</th>
       <th>Gender</th>
-      <th>Favorite color</th>
       <th>Date of birth</th>
+      <th>Favorite color</th>
       <th></th>
       <th></th>
       <th></th>
@@ -52,15 +53,13 @@
         <td><%= user.last_name %></td>
         <td><%= user.first_name %></td>
         <td><%= user.gender %></td>
-        <td><%= user.favorite_color %></td>
         <td><%= user.date_of_birth %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= user.favorite_color %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<br/>
 
 <h1>Sorted by Birthdate</h1>
 
@@ -70,8 +69,8 @@
       <th>Last name</th>
       <th>First name</th>
       <th>Gender</th>
-      <th>Favorite color</th>
       <th>Date of birth</th>
+      <th>Favorite color</th>
       <th></th>
       <th></th>
       <th></th>
@@ -84,15 +83,13 @@
         <td><%= user.last_name %></td>
         <td><%= user.first_name %></td>
         <td><%= user.gender %></td>
-        <td><%= user.favorite_color %></td>
         <td><%= user.date_of_birth %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= user.favorite_color %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<br/>
 
 <h1>Sorted by Last Name (descending)</h1>
 
@@ -102,8 +99,8 @@
       <th>Last name</th>
       <th>First name</th>
       <th>Gender</th>
-      <th>Favorite color</th>
       <th>Date of birth</th>
+      <th>Favorite color</th>
       <th></th>
       <th></th>
       <th></th>
@@ -116,18 +113,16 @@
         <td><%= user.last_name %></td>
         <td><%= user.first_name %></td>
         <td><%= user.gender %></td>
-        <td><%= user.favorite_color %></td>
         <td><%= user.date_of_birth %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= user.favorite_color %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<br/>
 
 
-<h2>Import Users</h2>
+<h1>Import Users</h1>
 <%= form_tag import_users_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
@@ -135,4 +130,4 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, :class => 'new-button' %>
