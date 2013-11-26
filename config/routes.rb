@@ -3,6 +3,8 @@ Reverb::Application.routes.draw do
     collection { post :import }
   end
 
+  mount Reverb::API => '/api'
+
   root to:'users#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
