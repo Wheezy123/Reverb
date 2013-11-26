@@ -27,11 +27,5 @@ describe User do
 		expect(user.date_of_birth).to eq('9-9-1986')
 	end
 
-	it "can import and parse pipe delimited data" do
-		contents = pipes.txt.import('/Users/administrator/Documents/Reverb/Reverb/db/pipes.txt')
-		expect(contents).to eq(:last_name => 'jackson', :first_name => 'michael',
-		 :gender => 'M', :date_of_birth => '1986-09-09', :favorite_color => 'red')
-	end
-
 end
 

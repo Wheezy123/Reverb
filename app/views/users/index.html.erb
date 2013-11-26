@@ -113,7 +113,7 @@
         <td><%= user.last_name %></td>
         <td><%= user.first_name %></td>
         <td><%= user.gender %></td>
-        <td><%= user.date_of_birth %></td>
+        <td><%= (user.date_of_birth).strftime("%m/%d/%y") %></td>
         <td><%= user.favorite_color %></td>
       </tr>
     <% end %>
