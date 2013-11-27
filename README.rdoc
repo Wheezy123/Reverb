@@ -1,4 +1,4 @@
-== Reverb Dev Apprentice Challenge ==
+== Reverb Dev Apprentice Challenge 
 
 This is the completed Reverb Apprentice Challenge.  This application can accept files delimited by commas, tabs,
 and pipes.  These files will then be uploaded directly into the database, and sorted in 3 different ways; by gender
