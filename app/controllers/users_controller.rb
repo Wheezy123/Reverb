@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    @ladies = User.order(:last_name).order(:gender)
+    @ladies_first = User.order(:last_name).order(:gender)
     @birthday = @users.order(:date_of_birth)
     @last = @users.order("last_name DESC")
   end

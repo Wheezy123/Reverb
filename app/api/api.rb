@@ -9,6 +9,11 @@ class API < Grape::API
       User.order(:gender)
     end
 
+    desc "Create a new user"
+    post do
+      User.create!({user:params[:user]})
+    end
+
     get :hello do
       { text: 'Hello from API'}
     end

@@ -22,9 +22,9 @@ describe User do
 		expect(user.favorite_color).to eq('red')
 	end
 
-	it "has a birthdate of 9-9-1986" do
+	it "has a birthdate of 08-29-1958" do
 		user = User.new
-		expect(user.date_of_birth).to eq('9-9-1986')
+		expect(user.date_of_birth).to eq('08-29-1958')
 	end
 
 end

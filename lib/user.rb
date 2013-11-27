@@ -6,6 +6,6 @@ class User
 		@first_name = 'michael'
 		@gender = 'M'
 		@favorite_color = 'red'
-    @date_of_birth = '9-9-1986'
+    @date_of_birth = '08-29-1958'
 	end
 end
