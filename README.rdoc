@@ -1,28 +1,18 @@
-== README
+== Reverb Dev Apprentice Challenge ==
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the completed Reverb Apprentice Challenge.  This application can accept files delimited by commas, tabs,
+and pipes.  These files will then be uploaded directly into the database, and sorted in 3 different ways; by gender
+(then by last name ascending), by birthdate, and by last name(descending).  
 
-Things you may want to cover:
+An API was also built along with this application, using Grape.  In order to access the API, visit
 
-* Ruby version
+http://localhost:3000/api/v1/users/
 
-* System dependencies
+and use one of the methods described in  /app/api/api.rb
 
-* Configuration
+For example, to get a list of all users sorted by their date of birth, simply visit:
+http://localhost:3000/api/v1/users/birthdays
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Note that all responses from the API will be returned in JSON format.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
