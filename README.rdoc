@@ -17,5 +17,5 @@ If you're looking to post a record using the API, use curl. Here is an example:
 curl http://localhost:3000/users --data "data_row=Jackson,Michael,M,1958-08-29,red"
 
 Note that all responses from the API will be returned in JSON format.
-
+ 
 
