@@ -1,7 +1,7 @@
 == Reverb Dev Apprentice Challenge 
 
 This is the completed Reverb Apprentice Challenge.  This application can accept files delimited by commas, tabs,
-and pipes.  These files will then be uploaded directly into the database, and sorted in 3 different ways; by gender
+and pipes.  These files will then be uploaded directly into the MySQL database, and sorted in 3 different ways; by gender
 (then by last name ascending), by birthdate, and by last name(descending).  
 
 An API was also built along with this application, using Grape.  In order to access the API, visit
