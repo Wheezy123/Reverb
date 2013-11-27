@@ -13,6 +13,9 @@ and use one of the methods described in  /app/api/api.rb
 For example, to get a list of all users sorted by their date of birth, simply visit:
 http://localhost:3000/api/v1/users/birthdays
 
+If you're looking to post a record using the API, use curl. Here is an example:
+curl http://localhost:3000/users --data "data_row=Jackson,Michael,M,1958-08-29,red"
+
 Note that all responses from the API will be returned in JSON format.
 
 
