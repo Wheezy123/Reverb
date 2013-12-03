@@ -44,7 +44,7 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
-    skip_before_action :verify_authenticity_token, :only => ["create"]
+    #skip_before_action :verify_authenticity_token, :only => ["create"]
   end
 
   # PATCH/PUT /users/1
