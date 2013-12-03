@@ -10,8 +10,11 @@ class API < Grape::API
     end
 
     desc "Create a new user"
+    params do
+      requires :user_params, type: String
+    end
     post do
-      User.create!({user:params[:user]})
+      User.create!({user:params[:user_params]})
     end
 
     get :hello do

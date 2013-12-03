@@ -1,11 +1,12 @@
 class UsersController < ApplicationController
+  protect_from_forgery except: :create
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
   def index
     @users = User.all
-    @ladies_first = User.order(:last_name).order(:gender)
+    @ladies_first = User.order(:gender, :last_name)
     @birthday = @users.order(:date_of_birth)
     @last = @users.order("last_name DESC")
   end
@@ -43,6 +44,7 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+    skip_before_action :verify_authenticity_token, :only => ["create"]
   end
 
   # PATCH/PUT /users/1
