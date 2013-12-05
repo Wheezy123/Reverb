@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    @ladies_first = User.order(:gender, :last_name)
-    @birthday = @users.order(:date_of_birth)
+    @ladies_first = @users.ladies_first
+    @birthday = @users.birthdays
     @last = @users.order("last_name DESC")
   end
 
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        # format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render action: 'show', status: :created, location: @user }
       else
         format.html { render action: 'new' }
@@ -52,8 +52,8 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { head :no_content }
+        # format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.json { render text:'string' }
       else
         format.html { render action: 'edit' }
         format.json { render json: @user.errors, status: :unprocessable_entity }

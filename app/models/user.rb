@@ -1,6 +1,18 @@
 class User < ActiveRecord::Base
   validates :last_name, :first_name, presence: true
 
+  def self.ladies_first
+    self.order(:gender, :last_name)
+  end
+
+  def self.birthdays
+    self.order(:date_of_birth)
+  end
+
+  def self.last_name
+    self.order("last_name DESC")
+  end
+
   def self.import(file)
     csv = File.open(file.path, 'rb')
     contents = file.read

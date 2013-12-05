@@ -14,7 +14,8 @@ class API < Grape::API
       requires :user_params, type: String
     end
     post do
-      puts User.create!(params[:user_params])
+      User.create!(params[:user_params])
+      puts params
     end
 
     get :hello do

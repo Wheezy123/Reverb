@@ -59,6 +59,9 @@ GEM
       virtus (>= 1.0.0)
     hashie (2.0.5)
     hike (1.2.3)
+    httparty (0.12.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.5)
     ice_nine (0.10.0)
     jbuilder (1.5.2)
@@ -153,6 +156,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   grape
+  httparty
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.0)
