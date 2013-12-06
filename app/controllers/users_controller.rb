@@ -41,7 +41,7 @@ class UsersController < ApplicationController
         format.json { render action: 'show', status: :created, location: @user }
       else
         format.html { render action: 'new' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        format.json { render json: JSON.pretty_generate(@user.errors), status: :unprocessable_entity }
       end
     end
     #skip_before_action :verify_authenticity_token, :only => ["create"]
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
         format.json { render text:'string' }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        format.json { render json: JSON.pretty_generate(@user.errors), status: :unprocessable_entity }
       end
     end
   end

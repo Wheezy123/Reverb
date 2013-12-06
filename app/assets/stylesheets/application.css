@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
+ .table.table-striped a {
+ 	text-decoration: underline;
+ }

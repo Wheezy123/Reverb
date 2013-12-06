@@ -1,6 +1,6 @@
-<h1>All Users (no order)</h1>
+<h2>All Users (no order)</h2>
 
-<table class="table table-striped">
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th>Last name</th>
@@ -31,9 +31,9 @@
 </table>
 <br/>
 
-<h1>Ladies First</h1>
+<h2>Ladies First (then last name ascending)</h2>
 
-<table class='table table-striped'>
+<table class='table table-striped table-bordered'>
   <thead>
     <tr>
       <th>Last name</th>
@@ -62,9 +62,9 @@
 </table>
 <br/>
 
-<h1>Sorted by Birthdate</h1>
+<h2>Sorted by Birthdate</h2>
 
-<table class='table table-striped'>
+<table class='table table-striped table-bordered'>
   <thead>
     <tr>
       <th>Last name</th>
@@ -93,9 +93,9 @@
 </table>
 <br/>
 
-<h1>Sorted by Last Name (descending)</h1>
+<h2>Sorted by Last Name (descending)</h2>
 
-<table class='table table-striped'>
+<table class='table table-striped table-bordered'>
   <thead>
     <tr>
       <th>Last name</th>
@@ -125,7 +125,7 @@
 <br/>
 
 
-<h1>Import Users</h1>
+<h2>Import Users</h2>
 <%= form_tag import_users_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
@@ -133,4 +133,4 @@
 
 <br>
 
-<%= link_to 'Create New User', new_user_path, :class => 'new-button' %>
+<%= link_to 'Create New User', new_user_path, :class => 'btn btn-success' %>

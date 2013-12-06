@@ -12,10 +12,10 @@ describe User do
 
 
 	it "sorts Users by date of birth" do
+    young_guy = User.create(last_name:"kid", first_name:"some", gender:"M", 
+      date_of_birth:Date.new(1990,03,05))
 		old_guy = User.create(last_name:"cash", first_name:"johnny", gender:"M", 
-			date_of_birth:Date.new(1920,03,05))
-		young_guy = User.create(last_name:"kid", first_name:"some", gender:"M", 
-			date_of_birth:Date.new(1990,03,05))
+			date_of_birth:Date.new(1932,02,26))
 		users = User.birthdays
 		expect(users.first.first_name).to eq("johnny")
 	end
@@ -36,7 +36,7 @@ describe User do
 	end
 
 
-	it "imports CSV files and correctly parses data" do
+	it "imports CSV files, correctly parses and assigns data" do
 		contents = File.read("#{Rails.root}/db/csvtest.txt")
 
 		if contents.include?("|")
@@ -59,7 +59,7 @@ describe User do
 	end
 
 
-		it "imports .xls(tab delimited) files and correctly parses data" do
+		it "imports .xls(Tab delimited), correctly parses and assigns data" do
 		contents = File.read("#{Rails.root}/db/xls_test.txt")
 
 		if contents.include?("|")
@@ -82,7 +82,7 @@ describe User do
 	end
   
 
-	it "imports Pipe delimited files and correctly parses data" do
+	it "imports Pipe delimited files, correctly parses and assigns data" do
 		contents = File.read("#{Rails.root}/db/pipestest.txt")
 
 		if contents.include?("|")
