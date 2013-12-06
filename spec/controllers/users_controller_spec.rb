@@ -25,33 +25,10 @@ describe UsersController do
   end
 
   it "correctly assigns @users" do
-    user = User.create(last_name:"Jones", first_name:"Jerry")
+    user = User.create(last_name:"Hendrix", first_name:"Jimmi")
     get :index
     expect(assigns[:users]).to eq([user])
   end
-
-  it "sorts users by gender, females before males" do
-    female = User.create(last_name:"kardashian", first_name:"kim", gender:"F")
-    male = User.create(last_name:"west", first_name:"kanye", gender:"M")
-    arr = [male,female].sort{|m,f| m.gender <=> f.gender }
-    get :index
-    expect(arr[0]).to eq(female)
-  end
-
-  it "sorts users by last name" do
-    adams = User.new(last_name:"adams", first_name:"john")
-    zellner = User.new(last_name:"zellner", first_name:"matt")
-    arr = [zellner, adams].sort{|a,z| a.last_name <=> z.last_name}
-    expect(arr[0]).to eq(adams)
-  end
-
-  it "sorts users by date of birth" do
-    oldie = User.create(last_name:"man", first_name:"old", gender:"M", 
-      date_of_birth: Date.new(1920,4,15))
-    newbie = User.create(last_name:"woman", first_name:"young", gender:"F", 
-      date_of_birth: Date.new(2000,4,15))
-  end
-
 end
 
 
