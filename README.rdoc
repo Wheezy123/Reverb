@@ -1,23 +1,34 @@
 == Reverb Dev Apprentice Challenge 
 
 This is the completed Reverb Apprentice Challenge.  This application can accept files delimited by commas, tabs,
-and pipes.  These files will then be uploaded directly into the MySQL database, and sorted in 3 different ways; by gender
-(then by last name ascending), by birthdate, and by last name(descending).  
+and pipes.  These files will then be uploaded directly into the MySQL database, and can be sorted in 3 different ways; 
+by gender (then by last name ascending), by birthdate, and by last name(descending).  
 
 An API was also built along with this application, using Grape.  In order to access the API, visit
 
 http://localhost:3000/api/v1/users/
 
-and use one of the methods described in  /app/api/api.rb
+This API can interact with the app in 4 ways:
 
-For example, to get a list of all users sorted by their date of birth, simply visit:
+to return Users sorted by birthdays:
 
-http://localhost:3000/api/v1/users/birthdays
+  http://localhost:3000/api/v1/users/birthdays
+  
+to return Users sorted by gender:
 
-If you're looking to post a record using the API, use curl. Here is an example:
+  http://localhost:3000/api/v1/users/gender
 
-curl http://localhost:3000/users --data "data_row=Jackson,Michael,M,1958-08-29,red"
+to return Users sorted by last name:
 
-Note that all responses from the API will be returned in JSON format.
+http://localhost:3000/api/v1/users/names
+
+
+to POST to the application (using HTTParty gem):  
+
+  HTTParty.post 'http://localhost:3000/users.json', :body => { user: { last_name: "keenan", 
+  first_name: "maynard", gender: "M", date_of_birth: "1964/04/17", favorite_color: "blue" } }
+
+
+All responses from the API will be returned in JSON format.
  
 
