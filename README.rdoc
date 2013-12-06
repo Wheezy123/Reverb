@@ -24,6 +24,6 @@ to POST to the application (using HTTParty gem):
   first_name: "maynard", gender: "M", date_of_birth: "1964/04/17", favorite_color: "blue" } }
 
 
-All responses from the API will be returned in JSON format.
+All responses from the API will be returned in JSON.
  
 
