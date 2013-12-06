@@ -5,26 +5,21 @@ and pipes.  These files will then be uploaded directly into the MySQL database, 
 by gender (then by last name ascending), by birthdate, and by last name(descending).  
 
 An API was also built along with this application, using Grape.  In order to access the API, visit
-
-http://localhost:3000/api/v1/users/
+  http://localhost:3000/api/v1/users/
 
 This API can interact with the app in 4 ways:
 
 to return Users sorted by birthdays:
-
   http://localhost:3000/api/v1/users/birthdays
   
 to return Users sorted by gender:
-
   http://localhost:3000/api/v1/users/gender
 
 to return Users sorted by last name:
-
-http://localhost:3000/api/v1/users/names
+  http://localhost:3000/api/v1/users/names
 
 
 to POST to the application (using HTTParty gem):  
-
   HTTParty.post 'http://localhost:3000/users.json', :body => { user: { last_name: "keenan", 
   first_name: "maynard", gender: "M", date_of_birth: "1964/04/17", favorite_color: "blue" } }
 
