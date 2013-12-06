@@ -16,9 +16,17 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 gem 'rspec-rails'
-
+# Use Grape API to talk to application
 gem 'grape'
+
+#Use httparty to make http requestes in rails console
 gem 'httparty'
+
+
+#bootstrap bundle
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
