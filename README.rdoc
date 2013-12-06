@@ -19,7 +19,7 @@ to return Users sorted by last name:
   http://localhost:3000/api/v1/users/names
 
 
-to POST to the application (using HTTParty gem):  
+Example POST request to the application (using HTTParty gem):  
   HTTParty.post 'http://localhost:3000/users.json', :body => { user: { last_name: "keenan", 
   first_name: "maynard", gender: "M", date_of_birth: "1964/04/17", favorite_color: "blue" } }
 
