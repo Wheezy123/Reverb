@@ -1,6 +1,6 @@
 == Reverb Challenge 
 
-This is the completed Reverb Apprentice Challenge.  This application can accept files delimited by commas, tabs,
+This application can accept files delimited by commas, tabs,
 and pipes.  These files will then be uploaded directly into the MySQL database, and can be sorted in 3 different ways; 
 by gender (then by last name ascending), by birthdate, and by last name(descending).  
 
